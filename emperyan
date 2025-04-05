@@ -2,7 +2,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Perfe
 local ThemeManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/Perfectionsthegoat/hexui/main/part2"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/violin-suzutsuki/LinoriaLib/refs/heads/main/addons/SaveManager.lua"))()
 local Window = Library:CreateWindow({
- Title = 'Hexploit V2 By Affeboy | .gg/traced',
+ Title = 'Emperyan.lua .gg/DFkRydn24R',
     Center = true,
     AutoShow = true,
     TabPadding = 8,
@@ -58,7 +58,7 @@ LeftGroupBox = Tabs.Main:AddLeftGroupbox('Aimlock')
     local ragelock = false  -- Default value for ragelock
     local orbitActive = false  -- Flag for orbit feature
     local orbitSpeed = 10 -- Orbit speed
-    local radius = 8 -- Orbit size
+    local radius = 9 -- Orbit size
     local rotation = CFrame.Angles(0, 0, 0) -- Rotation angles
     
     -- Ensure aimlock state is toggled correctly on each execution
@@ -424,7 +424,7 @@ LeftGroupBox = Tabs.Main:AddLeftGroupbox('Aimlock')
         Text = 'Orbit Speed',
         Default = orbitSpeed,
         Min = 0,
-        Max = 100,
+        Max = 1000,
         Rounding = 1,
         Callback = function(Value)
             print('[cb] Orbit Speed changed!', Value)
@@ -1765,7 +1765,7 @@ end)
         
         StarterGui:SetCore("SendNotification", {
             Title = "Fps Booster Loaded",
-            Text = "🎭  Hexploit 🎭",
+            Text = "🎭  Emperyan 🎭",
             Duration = 5,
         })
         
@@ -3389,11 +3389,17 @@ RightGroupBox:AddLabel('Fog Color Picker'):AddColorPicker('FogColorPicker', {
     local soundOptions = {
         Ding = "rbxassetid://8578195318",
         Hitmarker = "rbxassetid://9116483270",
-        Fortnite_Headshot = "rbxassetid://2513174484"
+        Fortnite_Headshot = "rbxassetid://2513174484",
+		Neverlose = "rbxassetid://6534948092",
+		Skeet = "rbxassetid://5633695679",
+		Bameware = "rbxassetid://3124331820",
+		Bell = "rbxassetid://6534947240",
+		Bubble = "rbxassetid://6534947588",
+		Minecraft = "rbxassetid://4018616850",
     }
     
     local currentHitSoundId = soundOptions.Ding  -- Default sound
-    local soundVolume = 1  -- Volume of the hit sound
+    local soundVolume = 2  -- Volume of the hit sound
     local previousHealth = {}  -- Store previous health of players
     local isHitSoundEnabled = false  -- Default state of the hit sound toggle
     
@@ -3483,7 +3489,7 @@ RightGroupBox:AddLabel('Fog Color Picker'):AddColorPicker('FogColorPicker', {
     
     -- Dropdown for selecting hit sound, positioned under the toggle
     RightGroupBox:AddDropdown('SoundDropdown', {
-        Values = { 'Ding', 'Hitmarker', 'Fortnite_Headshot' },
+        Values = { 'Ding', 'Hitmarker', 'Fortnite_Headshot', 'Neverlose' , 'Skeet' , 'Bameware' , 'Bell' , 'Bubble' , 'Minecraft' },
         Default = 1,
         Multi = false,
         Text = 'Select Hit Sound',
@@ -3943,14 +3949,13 @@ RunService = game:GetService("RunService")
 ReplicatedStorage = game:GetService("ReplicatedStorage")
 TextChatService = game:GetService("TextChatService")
 Promo = {
-    "🎭Hexploit On Top🎭",
-    "🎭Get Hexploit🎭",
-    "🎭Hexploit Best Lock🎭",
-    "🎭Hexploit Best Da Hood Script🎭",
-    "🎭HexploitUI On Git🎭",
-    "🎭Hexploit Keyless🎭",
-    "🎭Hexploit Best AutoStomp🎭",
-    "🎭Hexploit Best Animations🎭"
+    "🎭	Emperyan On Top🎭",
+    "🎭Get Emperyan🎭",
+    "🎭Emperyan Best Lock🎭",
+    "🎭Emperyan Best Da Hood Script🎭",
+    "🎭Emperyan Keyless🎭",
+    "🎭Emperyan Best AutoStomp🎭",
+    "🎭Emperyan Best Animations🎭"
 }
 
 ChatVersion = TextChatService.ChatVersion
@@ -4057,7 +4062,7 @@ MyButton = RightGroupBox:AddButton({
                 -- Show the notification
                 game.StarterGui:SetCore("SendNotification", {
                     Title = "Script Loaded";
-                    Text = "🎭  Hexploit 🎭";
+                    Text = "🎭 Emperyan 🎭";
                     Duration = 5;
                 })
                 notificationShown = false  -- Mark that the notification has been shown
@@ -6175,10 +6180,10 @@ LeftGroupBox = Tabs.Misc:AddLeftGroupbox('Auto Stomp')
             if _G.autoStomp and input.KeyCode == stompKey then
                 isLooping = not isLooping
                 if isLooping then
-                    showNotification("Auto Stomp Enabled", "🎭  Hexploit 🎭", 3)
+                    showNotification("Auto Stomp Enabled", "🎭  Emperyan 🎭", 3)
                     startStomping()  -- Now calling startStomping properly
                 else
-                    showNotification("Auto Stomp Disabled", "🎭  Hexploit 🎭", 3)
+                    showNotification("Auto Stomp Disabled", "🎭  Emperyan 🎭", 3)
                     stopStomping()
                 end
             end
@@ -6194,9 +6199,9 @@ LeftGroupBox = Tabs.Misc:AddLeftGroupbox('Auto Stomp')
             print('[cb] MyToggle changed to:', Value)
             _G.autoStomp = Value
             if _G.autoStomp then
-                showNotification("Auto Stomp Enabled", "🎭  Hexploit 🎭", 3)
+                showNotification("Auto Stomp Enabled", "🎭  Emperyan 🎭", 3)
             else
-                showNotification("Auto Stomp Disabled", "🎭  Hexploit 🎭", 3)
+                showNotification("Auto Stomp Disabled", "🎭  Emperyan 🎭", 3)
             end
         end
     })
@@ -6394,7 +6399,7 @@ LeftGroupBox = Tabs.Misc:AddLeftGroupbox('Auto Stomp')
                 gameReplicatedStorage.MainEvent:FireServer("Stomp")
 
                 -- Notify about the stomp
-                showNotification("Stomping", "🎭  Hexploit 🎭", 3)
+                showNotification("Stomping", "🎭  Emperyan 🎭", 3)
 
                 -- Wait 0.10 seconds before teleporting back (if TpBack is enabled)
                 wait(0.20)
@@ -6405,7 +6410,7 @@ LeftGroupBox = Tabs.Misc:AddLeftGroupbox('Auto Stomp')
                 end
             end
         else
-            showNotification("No Target Found", "🎭  Hexploit 🎭", 3)
+            showNotification("No Target Found", "🎭  Emperyan 🎭", 3)
         end
     end
 
@@ -6526,7 +6531,7 @@ MyButton = LeftGroupBox:AddButton({
         if humanoid then
             StarterGui:SetCore("SendNotification", {
                 Title = "🖤🦇Emo aah🥀⛓",
-                Text = "🎭 Hexploit 🎭",
+                Text = "🎭 Emperyan 🎭",
                 Duration = 2
             })
             humanoid.Health = 0
@@ -6794,7 +6799,7 @@ function onChatted(p, msg)
 
             if hidden and Config.enabled then
                 if Config.public then
-                    saymsg:FireServer((Config.publicItalics and "/me " or '') .. "{Hexploit} [" .. p.Name .. "]: " .. msg, "All")
+                    saymsg:FireServer((Config.publicItalics and "/me " or '') .. "{Emperyan} [" .. p.Name .. "]: " .. msg, "All")
                 else
                     PrivateProperties.Text = "{SPY} [" .. p.Name .. "]: " .. msg
                     StarterGui:SetCore("ChatMakeSystemMessage", PrivateProperties)
@@ -7437,7 +7442,7 @@ WatermarkConnection = game:GetService('RunService').RenderStepped:Connect(functi
 
     -- Update watermark with FPS and Ping
     local ping = math.floor(game:GetService('Stats').Network.ServerStatsItem['Data Ping']:GetValue())
-    Library:SetWatermark(('HexploitV2 | %s fps | %s ms'):format(
+    Library:SetWatermark(('Emperyan | %s fps | %s ms'):format(
         math.floor(FPS),
         ping
     ))
